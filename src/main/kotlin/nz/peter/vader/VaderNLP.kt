@@ -129,7 +129,7 @@ class VaderNLP {
 
         // setup the sentence splitter
         println("VaderNLP: loading en-sent.bin")
-        VaderNLP::class.java.getResourceAsStream("en-sent.bin").use { modelIn ->
+        VaderNLP::class.java.getResourceAsStream("/vader/en-sent.bin").use { modelIn ->
             if (modelIn == null) {
                 throw IOException("resource en-sent.bin not found in classpath")
             }
@@ -139,7 +139,7 @@ class VaderNLP {
 
         // setup the max-ent tokenizer
         println("VaderNLP: loading en-token.bin")
-        VaderNLP::class.java.getResourceAsStream("en-token.bin").use { modelIn ->
+        VaderNLP::class.java.getResourceAsStream("/vader/en-token.bin").use { modelIn ->
             if (modelIn == null) {
                 throw IOException("resource en-sent.bin not found in classpath")
             }
@@ -149,7 +149,7 @@ class VaderNLP {
 
         // setup the pos tagger
         println("VaderNLP: loading en-pos-maxent.bin")
-        VaderNLP::class.java.getResourceAsStream("en-pos-maxent.bin").use { modelIn ->
+        VaderNLP::class.java.getResourceAsStream("/vader/en-pos-maxent.bin").use { modelIn ->
             if (modelIn == null) {
                 throw IOException("resource en-sent.bin not found in classpath")
             }

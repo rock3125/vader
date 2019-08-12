@@ -317,7 +317,7 @@ class Vader {
 
         println("Vader: init lexicon(vader_sentiment_lexicon.txt)")
         moodSet = HashMap()
-        Vader::class.java.getResourceAsStream("vader_sentiment_lexicon.txt").use { vaderIn ->
+        Vader::class.java.getResourceAsStream("/vader/vader_sentiment_lexicon.txt").use { vaderIn ->
             if (vaderIn == null) {
                 throw IOException("vader_sentiment_lexicon.txt not found on class-path")
             }
@@ -344,7 +344,7 @@ class Vader {
 
         // add the special case idioms
         println("Vader: init idioms(vader_idioms.txt)")
-        Vader::class.java.getResourceAsStream("vader_idioms.txt").use { vaderIdiomsIn ->
+        Vader::class.java.getResourceAsStream("/vader/vader_idioms.txt").use { vaderIdiomsIn ->
             if (vaderIdiomsIn == null) {
                 throw IOException("vader_idioms.txt not found on class-path")
             }
