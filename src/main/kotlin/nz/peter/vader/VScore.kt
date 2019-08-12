@@ -39,6 +39,7 @@ class VScore(
         var negative: Double = 0.0,
         var compound: Double = 0.0) {
 
+    // pretty print the scores
     override fun toString(): String {
         val df3 = DecimalFormat("#.###")
         val df4 = DecimalFormat("#.####")

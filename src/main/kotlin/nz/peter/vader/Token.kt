@@ -31,9 +31,7 @@ package nz.peter.vader
  * a token, usually a single word, with POS (part of speech) tag
  *
  */
-class Token(// the value of the token
-        var value: String,// the part of speech tag (POS) of this item of text
-        var posTag: String) {
+class Token(var value: String, private var posTag: String) {
 
     var wordScore = 0.0 // the vader individual word score
 

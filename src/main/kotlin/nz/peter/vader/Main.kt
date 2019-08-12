@@ -44,7 +44,7 @@ fun main(args: Array<String>) {
     options.addOption("file", true, "input text-file (-file) to read and analyse using Vader")
 
     val cmdParser = DefaultParser()
-    var line: CommandLine? = null
+    val line: CommandLine?
     try {
         // parse the command line arguments
         line = cmdParser.parse(options, args)
@@ -94,5 +94,5 @@ fun main(args: Array<String>) {
  * @param options the options file of the command line system
  */
 private fun help(options: Options) {
-    println(options.getOption("file").getDescription())
+    println(options.getOption("file").description)
 }
