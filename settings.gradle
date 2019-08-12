@@ -1,0 +1,6 @@
+rootProject.name = 'vader'
+rootProject.projectDir = new File(settingsDir, '.')
+
+include 'vader'
+
+project(':vader').projectDir = "$rootDir/vader" as File
